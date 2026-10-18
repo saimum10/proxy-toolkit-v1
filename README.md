@@ -51,8 +51,10 @@ cd proxy-toolkit
 
 # 3. first run: creates a .venv, installs the Python dependencies, starts the app
 ./run.sh
+
 # 4. Install the launcher (application menu + icon)
 ./install_launcher.sh
+
 # 5.delete installer file
 cd ..
 rm -rf proxy-toolkit
