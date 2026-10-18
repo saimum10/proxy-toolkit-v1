@@ -56,8 +56,8 @@ bash run.sh
 bash install_launcher.sh
 
 # 5.delete installer file
-cd ..
-rm -rf proxy-toolkit
+# cd ..
+# rm -rf proxy-toolkit
 
 ```
 
