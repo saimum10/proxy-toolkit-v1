@@ -50,10 +50,10 @@ git clone https://github.com/saimum10/proxy-toolkit.git
 cd proxy-toolkit
 
 # 3. first run: creates a .venv, installs the Python dependencies, starts the app
-./run.sh
+bash run.sh
 
 # 4. Install the launcher (application menu + icon)
-./install_launcher.sh
+bash install_launcher.sh
 
 # 5.delete installer file
 cd ..
@@ -71,7 +71,7 @@ The first start takes a little longer because the dependencies are installed int
 cd proxy-toolkit
 git pull
 rm -f .venv/.deps_ok      # re-installs the dependencies on the next start
-./run.sh
+bash run.sh
 ```
 
 ## Uninstall (delete everything)
@@ -152,8 +152,7 @@ Strict and dynamic chains use the **Chain builder** (add from the pool, drag to 
 | Problem | Fix |
 |---|---|
 | `Could not load the Qt platform plugin "xcb"` | `sudo apt install libxcb-cursor0` |
-| `Permission denied` when running `./run.sh` | `chmod +x run.sh install_launcher.sh main.py` (or start it with `bash run.sh`) |
-| Launcher icon missing in the dock (Wayland) | Run `./install_launcher.sh` and start the app from the menu |
+| Launcher icon missing in the dock (Wayland) | Run `bash install_launcher.sh` and start the app from the menu |
 | `Cannot start the server` / port in use | Change the port in *Listen address* |
 | A site still shows your real IP | Check the browser really uses the proxy (Firefox has its own proxy settings), then check WebRTC |
 | Country filter excludes everything | Enable *Country / city / ISP lookup* in the Checker settings and check again |
