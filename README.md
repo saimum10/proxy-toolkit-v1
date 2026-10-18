@@ -7,7 +7,8 @@
 <p align="center">
   A desktop app for Debian-based Linux that <b>checks proxies</b> and then <b>uses them</b>:
   a local rotating / chaining proxy server.
-  Python · PyQt6 · asyncio
+ 
+    Python · PyQt6 · asyncio
 </p>
 
 ---
