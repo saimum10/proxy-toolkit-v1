@@ -6,7 +6,7 @@
 
 <p align="center">
   A desktop app for Debian-based Linux that <b>checks proxies</b> and then <b>uses them</b>:
-  a local rotating / chaining proxy server with a manual <b>Change IP</b> button.<br>
+  a local rotating / chaining proxy server.
   Python · PyQt6 · asyncio
 </p>
 
@@ -50,21 +50,17 @@ cd proxy-toolkit
 
 # 3. first run: creates a .venv, installs the Python dependencies, starts the app
 ./run.sh
+# 4. Install the launcher (application menu + icon)
+./install_launcher.sh
+# 5.delete installer file
+cd ..
+rm -rf proxy-toolkit
+
 ```
 
 The first start takes a little longer because the dependencies are installed into the local `.venv`
 (nothing is installed system-wide).
 
-## Install the launcher (application menu + icon)
-
-Run the app once with `./run.sh` first, then:
-
-```bash
-./install_launcher.sh
-```
-
-"Proxy Toolkit" now appears in your application menu with its icon. If you move or rename the
-folder later, run `./install_launcher.sh` again.
 
 ## Update
 
@@ -160,33 +156,3 @@ Strict and dynamic chains use the **Chain builder** (add from the pool, drag to 
 | Country filter excludes everything | Enable *Country / city / ISP lookup* in the Checker settings and check again |
 | A part of the window is cut off | Increase the window size; the side panels scroll and follow the system font size |
 
-## Data and files
-
-| Path | Content |
-|---|---|
-| `~/.config/proxy-toolkit/lists.json` | favourites and blacklist |
-| `~/.local/share/applications/proxy-toolkit.desktop` | menu entry (created by `install_launcher.sh`) |
-| `<project>/.venv` | Python environment (created by `run.sh`) |
-
-## Project layout
-
-```
-proxy-toolkit/
-├── main.py                  # entry point
-├── run.sh                   # creates .venv on first run, starts the app
-├── install_launcher.sh      # application-menu entry + icon
-├── requirements.txt
-├── assets/                  # app icon
-├── core/
-│   ├── checker.py           # async proxy checker
-│   ├── server.py            # local proxy server: rotation, chains, health monitor, kill-switch
-│   ├── parser.py            # proxy list parser
-│   ├── geo.py               # country / ISP lookup
-│   ├── export.py            # JSON / CSV / TXT export
-│   ├── store.py             # favourites / blacklist
-│   └── models.py
-└── gui/
-    ├── main_window.py       # Checker tab
-    ├── server_tab.py        # Rotation / Chain tab
-    └── results_model.py
-```
