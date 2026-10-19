@@ -46,7 +46,7 @@ sudo apt update
 sudo apt install git python3 python3-venv python3-pyqt6 libxcb-cursor0
 
 # 2. download
-git clone https://github.com/saimum10/proxy-toolkit.git
+git clone https://github.com/saimum10/proxy-toolkit-v1.git
 cd proxy-toolkit
 
 # 3. first run: creates a .venv, installs the Python dependencies, starts the app
