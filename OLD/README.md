@@ -46,8 +46,8 @@ sudo apt update
 sudo apt install git python3 python3-venv python3-pyqt6 libxcb-cursor0
 
 # 2. download
-git clone https://github.com/saimum10/proxy-toolkit-v1.git
-cd proxy-toolkit
+git clone https://github.com/saimum10/proxy-toolkit-v1/OLD.git
+cd OLD
 
 # 3. first run: creates a .venv, installs the Python dependencies, starts the app
 bash run.sh
@@ -57,7 +57,7 @@ bash install_launcher.sh
 
 # 5.delete installer file
 # cd ..
-# rm -rf proxy-toolkit
+# rm -rf OLD
 
 ```
 
@@ -68,7 +68,7 @@ The first start takes a little longer because the dependencies are installed int
 ## Update
 
 ```bash
-cd proxy-toolkit
+cd OLD
 git pull
 rm -f .venv/.deps_ok      # re-installs the dependencies on the next start
 bash run.sh
@@ -87,7 +87,7 @@ update-desktop-database ~/.local/share/applications 2>/dev/null || true
 rm -rf ~/.config/proxy-toolkit
 
 # the app itself (the cloned folder, including its .venv)
-cd .. && rm -rf proxy-toolkit
+cd .. && rm -rf OLD
 ```
 
 ## Usage
