@@ -2,7 +2,7 @@
   <img src="assets/icon.png" alt="Proxy Toolkit" width="110">
 </p>
 
-<h1 align="center">Proxy Toolkit</h1>
+<h1 align="center">proxy-toolkit-old</h1>
 
 <p align="center">
   A desktop app that <b>checks proxies</b> and then <b>uses them</b>:
@@ -45,8 +45,8 @@ sudo apt update
 sudo apt install git python3 python3-venv
 
 # 2. download
-git clone https://github.com/saimum10/proxy-toolkit.git
-cd proxy-toolkit
+git clone https://github.com/saimum10/proxy-toolkit-v1.git
+cd proxy-toolkit-v1
 
 # 3. build (creates a clean build venv, installs PyInstaller, builds the binary and the .deb)
 bash build_linux.sh
@@ -112,7 +112,7 @@ single-file PyInstaller programs by mistake; the source is in this repository.
 sudo apt remove proxy-toolkit
 
 # saved favourites / blacklist (optional)
-rm -rf ~/.config/proxy-toolkit
+rm -rf ~/.config/proxy-toolkit-v1
 
 # leftover temporary Safe-browser profiles (optional)
 rm -rf ~/proxy-toolkit-profiles
@@ -139,8 +139,8 @@ sudo apt update
 sudo apt install git python3 python3-venv python3-pyqt6 libxcb-cursor0
 
 # 2. download
-git clone https://github.com/saimum10/proxy-toolkit.git
-cd proxy-toolkit
+git clone https://github.com/saimum10/proxy-toolkit-v1.git
+cd proxy-toolkit-v1
 
 # 3. first run: creates a .venv, installs the Python dependencies, starts the app
 bash run.sh
@@ -150,8 +150,7 @@ bash install_launcher.sh
 
 # 5. delete installer file
 # cd ..
-# rm -rf proxy-toolkit
-
+# rm -rf proxy-toolkit-v1
 ```
 
 The first start takes a little longer because the dependencies are installed into the local `.venv`
